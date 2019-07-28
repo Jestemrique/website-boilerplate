@@ -1,0 +1,21 @@
+<nav class="navbar is-transparent " role="navigation" aria-label="main-navigation">
+    
+    <span class="navbar-burger burger has-text-white" data-target="navMainMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </span>
+    
+    <div id="navMainMenu" class="navbar-menu ">
+        
+            <div class="navbar-end">
+                {% for item in site.data.nav-main %}
+                <a href="{{ item.link }}" class="navbar-item has-text-white has-text-grey-mobile-only {% if page.url == item.link %} has-text-weight-bold  {% endif %} " >{{ item.name }}</a>
+                {% endfor %}
+            </div>
+        
+    </div>
+</nav>  
+
+
+

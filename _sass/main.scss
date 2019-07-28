@@ -1,0 +1,47 @@
+
+//Epr colors:
+$epr-orange: #ebb77d;
+
+//epr fonts
+$epr-body-family: "Rokkitt";
+$epr-title-family: "Assistant";
+
+//Bulma variables
+$body-font-size: 1.5rem;
+
+//Font family
+$family-primary: "Rokkitt"; 
+//$title-family: true;
+$title-weight: 100;
+
+
+
+//Links
+//$link: $epr-orange;
+
+
+//Bulma components.
+@import "bulma/sass/utilities/_all";
+@import "bulma/sass/base/_all";
+
+@import "bulma/sass/grid/columns";
+
+@import "bulma/sass/form/_all";
+
+
+@import "bulma/sass/elements/_all";
+// @import "bulma/sass/elements/container";
+// @import "bulma/sass/elements/title";
+// @import "bulma/sass/elements/tag";
+
+
+
+
+
+@import "bulma/sass/layout/_all";
+@import "bulma/sass/components/navbar";
+
+//epr styles.
+@import "epr_styles/jestemrique";
+//@import "epr_styles/debug";
+

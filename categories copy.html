@@ -1,0 +1,39 @@
+---
+layout: page_layout
+title: Categories
+---
+<div class="columns is-centered">
+    <div class="column is-narrow">
+        <div class="field is-grouped is-grouped-multiline">
+            {% for category  in site.categories %}
+                <div class="control">  
+                    <div class="tags has-addons is-medium">  
+                        <span class="tag is-large "> <a href="#{{category[0] }}"> {{ category[0] | capitalize}}</a></span>
+                        <span class="tag is-large has-text-grey">{{ category[1].size }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<hr>
+{% for category  in site.categories %}
+<div class="columns">
+<div class="column">
+    <div class="category">
+        <div class=" category__title is-size-2 has-text-grey ">
+            <a name="{{ category[0]}}"></a>  {{category[0] | capitalize}}
+        </div>
+        <div class="category__body">
+            <ul>
+                {% for post  in category[1] %}
+                    <li>
+                      <a class="is-size-4" href="{{ post.url }}">{{ post.title }}</a> - <span class="is-size-6">{{post.date | date_to_string}}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+{% endfor %}

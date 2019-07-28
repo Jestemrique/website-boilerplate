@@ -1,0 +1,25 @@
+---
+layout: base_layout
+---
+
+
+<section class="section">
+    
+        <article class="epr-post">
+          <header class="container epr-post__header">
+            <h2 class="title is-1 is-size-3-mobile">{{page.title}}</h2>
+            {{ page.date | date_to_string }}
+          </header>
+          <div class="container epr-post__body content">
+            {{ content }}
+          </div>
+
+          <footer class="container">
+          <p> Space for post footer [comments, share, etc.]</p>
+          </footer>
+
+
+        </article>
+    </section>
+
+
