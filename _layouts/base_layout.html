@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400&display=swap" rel="stylesheet">  -->
     <link href="https://fonts.googleapis.com/css?family=Assistant:200|Rokkitt:300&display=swap" rel="stylesheet">
     
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -13,9 +12,32 @@
   
   <body>
     
-    {% include hero-main.html %}
-    {{ content }}
+    
+    <section class="section">
+      <div class="container ">
+        {% include nav-main.html %}
+      </div>
+    </section>
+   
+    <section class="section">
+      <div class="container">
+        {{ content }}
+      </div>
+    </section>
+    
 
+    <div class="section">
+      <div class="container">
+        <footer class="footer has-text-light has-text-centered is-size-6">
+          <p>Include footer info.</p>
+        </footer>
+      </div>
+    </div>
+  
+  
+    </div>
     <script src="/assets/js/bulma-scripts.js"></script>
+  
+  
   </body>
   </html>

@@ -1,47 +1,38 @@
-
-//Epr colors:
-$epr-orange: #ebb77d;
-
-//epr fonts
-$epr-body-family: "Rokkitt";
-$epr-title-family: "Assistant";
-
-//Bulma variables
-$body-font-size: 1.5rem;
-
-//Font family
-$family-primary: "Rokkitt"; 
-//$title-family: true;
-$title-weight: 100;
+//My vars.
+$family-primary: "Assistant";
+$family-secondary: 'Rokkitt';
+$body-family: $family-secondary;
+$body-size: 1.5rem;
 
 
+//Titles.
+$title-family: $family-primary;
+$subtitle-family: $family-primary;
+$title-weight: 300;
+$subtitle-weight: 300;
 
-//Links
-//$link: $epr-orange;
+//Colors.
+$primary: hsl(0, 0%, 48%); //$grey;
 
-
-//Bulma components.
-@import "bulma/sass/utilities/_all";
-@import "bulma/sass/base/_all";
-
-@import "bulma/sass/grid/columns";
-
-@import "bulma/sass/form/_all";
-
-
-@import "bulma/sass/elements/_all";
-// @import "bulma/sass/elements/container";
-// @import "bulma/sass/elements/title";
-// @import "bulma/sass/elements/tag";
+//links
+$link-color: hsl(0, 0%, 71%); //$grey-light;
+$link: $link-color;
 
 
+//Sections.
+$section-padding: 0.5rem 0.5rem;
 
 
+//Navbar
+$navbar-height: 0rem;
+$navbar-padding-vertical: 0rem;
 
-@import "bulma/sass/layout/_all";
-@import "bulma/sass/components/navbar";
+//Footer
+$footer-background-color: hsl(0, 0%, 0%); //$grey-dark;
+$footer-padding: 0.5rem 0.5rem 0.5rem;
+
+@import "bulma/bulma";
 
 //epr styles.
 @import "epr_styles/jestemrique";
 //@import "epr_styles/debug";
-

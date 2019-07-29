@@ -1,18 +1,22 @@
-<nav class="navbar is-transparent " role="navigation" aria-label="main-navigation">
+<nav class="navbar" role="navigation" aria-label="main-navigation">
+
+        <div class="navbar-brand ">
+                <a class="navbar-item has-text-dark is-size-4" href="http://localshot:4000">
+                  Jestemrique
+                </a>
 
 
-
-    <span class="navbar-burger burger has-text-white" data-target="navMainMenu">
+    <span class="navbar-burger burger" data-target="navMainMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
     </span>
-    
-    <div id="navMainMenu" class="navbar-menu ">
+        </div>
+    <div id="navMainMenu" class="navbar-menu">
         
             <div class="navbar-end">
                 {% for item in site.data.nav-main %}
-                <a href="{{ item.link }}" class="navbar-item has-text-grey-mobile-only {% if page.url == item.link %} has-text-weight-bold  {% endif %} " >{{ item.name }}</a>
+                <a href="{{ item.link }}" class="navbar-item {% if page.url == item.link %} has-text-weight-bold  {% endif %} " >{{ item.name }}</a>
                 {% endfor %}
             </div>
         

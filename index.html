@@ -2,70 +2,23 @@
 layout: page_layout
 title: Home
 ---
+
+
 {% for post in site.posts %}
-<section class="section">
-        <div class="container">
-            <div class="epr-post">
-                <div class="epr-post__title">
-                    <h1 class="title"><a href="{{post.url}}" class="epr-link">{{post.title}}</a></h1>            
-                </div>
-                <div class="epr-post__excerpt content">
-                    
-                    {{ post.content | truncatewords: 75 }}
-                </div>  
-                <div class="epr-post__footer is-size-5-mobile">
-            <div class="columns is-mobile">
-            <div class="column is-narrow-mobile">
-                {{ post.date | date_to_string }}
-            </div>
-            <div class="column ">
-                <div class="tags are-medium is-pulled-right">
-                {% for category in post.categories %}
-                  <span class="epr-tag">{{ category }}</span>
-                {% endfor %}
-                </div>
-            </div>
-            </div>
-                </div>                  
-            </div>
-        </div>
-    </section>
+
+  <h1 class="title is-size-5 is-paddingless">
+    <a href="{{post.url}}">{{post.title}}</a>
+  </h1>  
+  <div class="container content">
+  {{ post.content | truncatewords: 75 }} 
+  <hr>
+  {{ post.date | date_to_string }}
+    {% for category in post.categories %}
+      {{ category }}
+    {% endfor %}
+</div>
 {% endfor %} 
 
-
-
-
-
-
-
-<!-- {% for post in site.posts %}
-<section class="section">
-        <div class="container">
-            <div class="epr-post">
-                <div class="epr-post__title">
-                    <h1 class="title"><a href="{{post.url}}" class="epr-link">{{post.title}}</a></h1>            
-                </div>
-                <div class="epr-post__excerpt content">
-                    {{post.excerpt}}
-                </div>  
-                <div class="epr-post__footer is-size-5-mobile">
-            <div class="columns is-mobile">
-            <div class="column is-narrow-mobile">
-                {{ post.date | date_to_string }}
-            </div>
-            <div class="column ">
-                <div class="tags are-medium is-pulled-right">
-                {% for category in post.categories %}
-                  <span class="epr-tag">{{ category }}</span>
-                {% endfor %}
-                </div>
-            </div>
-            </div>
-                </div>                  
-            </div>
-        </div>
-    </section>
-{% endfor %}  -->
 
 
 
